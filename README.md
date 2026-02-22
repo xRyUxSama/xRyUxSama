@@ -1,4 +1,26 @@
 ## Hi there 👋
+# Hi, I’m Vlad Cioca 👋
+
+## Who am I?
+
+I’m the CEO at SAVA Logistic, based in Castellar del Vallès. Background in Business Administration (logistics focus) and hands-on experience leading international transport operations, customer retention, and issue resolution in the logistics sector. 
+
+## What am I currently working on?
+
+* Building and scaling **n8n automations** (agentic workflows, ops + marketing pipelines, reporting, and integrations).
+
+## What tools do I use?
+
+* **Automation / Agents:** n8n, Antigravity
+* **Dev:** Visual Studio Code
+* **LLMs:** Claude, Gemini
+* **Data / Backend:** Supabase
+* **Ops stack:** Google Workspace
+
+## How to reach me
+
+* **WhatsApp:** [https://wa.me/34627259871](https://wa.me/34627259871)
+* **Email:** mailto:vlad[.cioca@savaexpress.com](mailto:.cioca@savaexpress.com)
 
 <!--
 **xRyUxSama/xRyUxSama** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
