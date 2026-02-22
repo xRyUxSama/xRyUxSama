@@ -19,8 +19,8 @@ I’m the CEO at SAVA Logistic, based in Castellar del Vallès. Background in Bu
 
 ## How to reach me
 
-* **WhatsApp:** [https://wa.me/34627259871](https://wa.me/34627259871)
-* **Email:** mailto:vlad[.cioca@savaexpress.com](mailto:.cioca@savaexpress.com)
+* **WhatsApp:** [+34627259871](https://wa.me/34627259871)
+* **Email:** [vlad.cioca@savaexpress.com](mailto:vlad.cioca@savaexpress.com)
 
 <!--
 **xRyUxSama/xRyUxSama** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
