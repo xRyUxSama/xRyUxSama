@@ -1,4 +1,3 @@
-## Hi there 👋
 # Hi, I’m Vlad Cioca 👋
 
 ## Who am I?
