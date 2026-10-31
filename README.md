@@ -36,54 +36,54 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-## 🧭 Cómo trabajo con AgentMux (varias IA, un solo chat)
+## 🧭 How I work with AgentMux (many AIs, one chat)
 
-Cada proyecto se abre en su propia ventana de AgentMux. Yo sólo hablo con su **Organizador**: él reparte el trabajo entre
-las IA (Claude programa, Codex revisa), me pregunta por el Kanban y nada llega a producción sin mi orden.
+Each project opens in its own AgentMux window. I only talk to its **Organizer**: it splits the work between the AIs
+(Claude builds, Codex reviews), asks me through the Kanban, and nothing reaches production without my say-so.
 
 ```mermaid
 flowchart TD
-    A["1 · Abro el acceso directo del proyecto<br/>(la ventana lleva su nombre)"] --> B["2 · Le escribo SÓLO al Organizador<br/>qué quiero, en mis palabras"]
-    B --> C["3 · El Organizador reparte<br/>un carril por tarea, en su propia rama"]
-    C --> W["Workers de Claude<br/>programan y prueban"]
-    C --> X["Revisor de Codex<br/>revisa lo de Claude"]
-    W --> Q{"¿Necesitan una<br/>decisión mía?"}
+    A["1 · Open the project's shortcut<br/>(the window carries its name)"] --> B["2 · Write ONLY to the Organizer<br/>what I want, in my own words"]
+    B --> C["3 · The Organizer splits the work<br/>one lane per task, on its own branch"]
+    C --> W["Claude workers<br/>build and test"]
+    C --> X["Codex reviewer<br/>reviews Claude's work"]
+    W --> Q{"Do they need<br/>a decision from me?"}
     X --> Q
-    Q -- "Sí" --> K["4 · Kanban › «Needs you»<br/>contesto a, b o c"]
+    Q -- "Yes" --> K["4 · Kanban › «Needs you»<br/>I answer a, b or c"]
     K --> C
-    Q -- "No, poco riesgo" --> R["Siguen con la opción<br/>recomendada y me avisan"]
+    Q -- "No, low risk" --> R["They go with the<br/>recommended option and tell me"]
     R --> V
-    W --> V["5 · Calidad antes de darlo por bueno<br/>pruebas · tipos · revisión cruzada · revisión del Organizador"]
-    V --> S["6 · Kanban › «Review»<br/>Accept o Send back"]
+    W --> V["5 · Quality before it counts as done<br/>tests · types · cross-review · Organizer review"]
+    V --> S["6 · Kanban › «Review»<br/>Accept or Send back"]
     S -- "Send back" --> C
-    S -- "Accept" --> I["7 · El Integrador junta los carriles,<br/>verifica una vez y sube a dev"]
-    I --> D["8 · Miro el entorno de pruebas (dev)"]
-    D -- "Algo no está bien" --> B
-    D -- "Está bien" --> L["9 · Producción (LIVE)<br/>sólo con mi orden expresa"]
+    S -- "Accept" --> I["7 · The Integrator merges the lanes,<br/>verifies once and pushes to dev"]
+    I --> D["8 · I check the test environment (dev)"]
+    D -- "Something is off" --> B
+    D -- "All good" --> L["9 · Production (LIVE)<br/>only on my explicit order"]
 
-    classDef yo fill:#d4af37,stroke:#8a6d1a,color:#000
-    class A,B,K,S,D,L yo
+    classDef me fill:#d4af37,stroke:#8a6d1a,color:#000
+    class A,B,K,S,D,L me
 ```
 
-<sub>En dorado, lo que hago yo. Todo lo demás lo hacen los agentes.</sub>
+<sub>Gold steps are mine. Everything else is done by the agents.</sub>
 
-**Lo que uso cada día**
+**What I use every day**
 
-| Necesito | Dónde |
+| I need to | Where |
 |---|---|
-| Hablar con el proyecto | el panel del Organizador, y sólo ese |
-| Ver qué me están preguntando | **Kanban** en la barra de arriba, columna «Needs you» |
-| Ver a todos los agentes de un vistazo | **Swarm** (también para mandar un mensaje a varios a la vez) |
-| Que no se paren a cada paso | **Supervisor** en *Steady* para los organizadores |
-| Dictar en vez de escribir | `Ctrl+Shift+V` (en local, el audio no sale del PC) |
-| Cambiar de panel | `Ctrl+Shift+1…9` · `F6` |
+| Talk to the project | the Organizer's pane, and only that one |
+| See what they're asking me | **Kanban** in the top bar, «Needs you» column |
+| See every agent at a glance | **Swarm** (also to message several at once) |
+| Keep them from stopping at every step | **Supervisor** set to *Steady* for the Organizers |
+| Dictate instead of typing | `Ctrl+Shift+V` (local: the audio never leaves the PC) |
+| Switch panes | `Ctrl+Shift+1…9` · `F6` |
 
-**Reglas que no se saltan**
+**Rules that never bend**
 
-- Una pregunta de dinero, permisos, datos de personas o producción **siempre espera mi respuesta**.
-- Ningún agente sube a producción; el Integrador sólo sube a dev, y a LIVE con mi orden.
-- Si cambio la configuración de un agente (instrucciones o herramientas), para que la cargue: **Stop** en el Swarm →
-  cerrar su panel → abrirlo desde su tarjeta en «My Agents».
+- Anything about money, permissions, personal data or production **always waits for my answer**.
+- No agent pushes to production; the Integrator only pushes to dev, and to LIVE on my order.
+- When I change an agent's setup (instructions or tools), to make it load: **Stop** in the Swarm → close its pane →
+  open it again from its card in «My Agents».
 
 <!-- claude-tracker:start -->
 ## 🌳 What I've built
