@@ -36,6 +36,55 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
+## 🧭 Cómo trabajo con AgentMux (varias IA, un solo chat)
+
+Cada proyecto se abre en su propia ventana de AgentMux. Yo sólo hablo con su **Organizador**: él reparte el trabajo entre
+las IA (Claude programa, Codex revisa), me pregunta por el Kanban y nada llega a producción sin mi orden.
+
+```mermaid
+flowchart TD
+    A["1 · Abro el acceso directo del proyecto<br/>(la ventana lleva su nombre)"] --> B["2 · Le escribo SÓLO al Organizador<br/>qué quiero, en mis palabras"]
+    B --> C["3 · El Organizador reparte<br/>un carril por tarea, en su propia rama"]
+    C --> W["Workers de Claude<br/>programan y prueban"]
+    C --> X["Revisor de Codex<br/>revisa lo de Claude"]
+    W --> Q{"¿Necesitan una<br/>decisión mía?"}
+    X --> Q
+    Q -- "Sí" --> K["4 · Kanban › «Needs you»<br/>contesto a, b o c"]
+    K --> C
+    Q -- "No, poco riesgo" --> R["Siguen con la opción<br/>recomendada y me avisan"]
+    R --> V
+    W --> V["5 · Calidad antes de darlo por bueno<br/>pruebas · tipos · revisión cruzada · revisión del Organizador"]
+    V --> S["6 · Kanban › «Review»<br/>Accept o Send back"]
+    S -- "Send back" --> C
+    S -- "Accept" --> I["7 · El Integrador junta los carriles,<br/>verifica una vez y sube a dev"]
+    I --> D["8 · Miro el entorno de pruebas (dev)"]
+    D -- "Algo no está bien" --> B
+    D -- "Está bien" --> L["9 · Producción (LIVE)<br/>sólo con mi orden expresa"]
+
+    classDef yo fill:#d4af37,stroke:#8a6d1a,color:#000
+    class A,B,K,S,D,L yo
+```
+
+<sub>En dorado, lo que hago yo. Todo lo demás lo hacen los agentes.</sub>
+
+**Lo que uso cada día**
+
+| Necesito | Dónde |
+|---|---|
+| Hablar con el proyecto | el panel del Organizador, y sólo ese |
+| Ver qué me están preguntando | **Kanban** en la barra de arriba, columna «Needs you» |
+| Ver a todos los agentes de un vistazo | **Swarm** (también para mandar un mensaje a varios a la vez) |
+| Que no se paren a cada paso | **Supervisor** en *Steady* para los organizadores |
+| Dictar en vez de escribir | `Ctrl+Shift+V` (en local, el audio no sale del PC) |
+| Cambiar de panel | `Ctrl+Shift+1…9` · `F6` |
+
+**Reglas que no se saltan**
+
+- Una pregunta de dinero, permisos, datos de personas o producción **siempre espera mi respuesta**.
+- Ningún agente sube a producción; el Integrador sólo sube a dev, y a LIVE con mi orden.
+- Si cambio la configuración de un agente (instrucciones o herramientas), para que la cargue: **Stop** en el Swarm →
+  cerrar su panel → abrirlo desde su tarjeta en «My Agents».
+
 <!-- claude-tracker:start -->
 ## 🌳 What I've built
 
